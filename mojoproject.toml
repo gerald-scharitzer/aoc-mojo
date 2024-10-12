@@ -1,0 +1,13 @@
+[project]
+authors = ["Gerald Scharitzer"]
+channels = ["conda-forge", "https://conda.modular.com/max"]
+description = "Advent of Code in Mojo"
+name = "adventofmojo"
+platforms = ["linux-64"]
+version = "0.1.0a0.dev0"
+
+[tasks]
+main = "mojo run src/main.mojo"
+
+[dependencies]
+max = ">=24.5.0,<25"
