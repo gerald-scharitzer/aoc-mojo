@@ -1,6 +1,6 @@
-fn run() raises -> String:
-	print("Day 1")
-	file = open("data/year2023/day1test.txt", "r")
+fn run(input_path: String = "data/year2023/day1test.txt") raises -> List[String]:
+	result = List[String]()
+	file = open(input_path, "r")
 	text = file.read()
 	lines = text.splitlines()
 	digits = str("")
@@ -22,4 +22,5 @@ fn run() raises -> String:
 				digits += char
 				break
 		value += int(digits)
-	return str(value)
+	result.append(str(value))
+	return result
