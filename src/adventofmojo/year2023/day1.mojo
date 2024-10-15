@@ -1,3 +1,17 @@
+from adventofmojo.day import Day
+
+struct Day1(Day):
+	var name: String
+	
+	fn __init__(inout self):
+		self.name = "Trebuchet?!"
+	
+	fn get_name(self) -> String:
+		return self.name
+	
+	fn set_name(inout self, name: String):
+		self.name = name
+
 fn run(input_path: String = "data/year2023/day1test.txt") raises -> List[String]:
 	result = List[String]()
 	file = open(input_path, "r")
