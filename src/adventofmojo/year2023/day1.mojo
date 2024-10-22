@@ -1,4 +1,4 @@
-from adventofmojo.day import Day
+from adventofmojo.day import Day, read_input
 
 struct Day1(Day):
 	var name: String
@@ -14,8 +14,7 @@ struct Day1(Day):
 
 	fn run(self, input_path: String = "data/year2023/day1test.txt") raises -> List[String]:
 		result = List[String]()
-		file = open(input_path, "r")
-		text = file.read()
+		text = read_input(input_path)
 		lines = text.splitlines()
 		digits = str("")
 		value = 0
