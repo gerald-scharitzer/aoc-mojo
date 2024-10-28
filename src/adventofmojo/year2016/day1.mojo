@@ -23,6 +23,19 @@ struct Day1(Day):
 		| east    |          1 |        0 |
 		| south   |          0 |       -1 |
 		| west    |         -1 |        0 |
+
+		Turning translates these horizontal and vertical differences.
+
+		| bearing | horizontal | vertical | turn  | horizontal | vertical |
+		|---------|------------|----------|-------|------------|----------|
+		| north   |          0 |        1 | right |          1 |        0 |
+		| east    |          1 |        0 | right |          0 |       -1 |
+		| south   |          0 |       -1 | right |         -1 |        0 |
+		| west    |         -1 |        0 |	right |          0 |        1 |
+		| north   |          0 |        1 | left  |         -1 |        0 |
+		| east    |          1 |        0 | left  |          0 |       -1 |
+		| south   |          0 |       -1 | left  |          1 |        0 |
+		| west    |         -1 |        0 | left  |          0 |       -1 |
 		"""
 		result = List[String]()
 		text = read_input(input_path)
