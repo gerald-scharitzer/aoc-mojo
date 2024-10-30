@@ -48,10 +48,18 @@ struct Day1(Day):
 
 		for line in lines:
 			chars = line[]
-
-			for char in chars: # find first digit
-				if char == "R":
+			items = chars.split(", ")
+			for item in items:
+				chars = item[]
+				turn = chars[0]
+				if turn == "R":
 					pass # FIXME implement bearing change
+				elif turn == "L":
+					pass # FIXME implement bearing change
+				else:
+					raise Error("Invalid turn: " + turn)
+				steps = chars[1:]
+				count = int(steps)
 
 		distance = abs(latitude) + abs(longitude) # taxicab distance
 		result.append(str(distance))
